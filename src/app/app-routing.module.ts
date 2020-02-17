@@ -5,6 +5,7 @@ import { SliderComponent } from './home/slider/slider.component';
 import { ProductsListComponent } from './products-list/products-list.component';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = 
@@ -25,6 +26,10 @@ const routes: Routes =
 {
   path:"store",
   component:ProductsListComponent
+},
+{
+  path:"login",
+  component:LoginComponent
 }
 ];
 
