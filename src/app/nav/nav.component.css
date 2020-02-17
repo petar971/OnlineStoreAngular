@@ -1,0 +1,109 @@
+/* adds some margin below the link sets  */
+.navbar .dropdown-menu div[class*="col"] {
+    margin-bottom:1rem;
+ }
+ 
+ .navbar .dropdown-menu {
+  margin-top:15px;
+   border:none;
+   background-color:rgba(0, 0, 0, 0.541)!IMPORTANT;
+ }
+
+ 
+ 
+ /* breakpoint and up - mega dropdown styles */
+ 
+ 
+ /* NAvigation */
+
+ .my-nav{
+   position: relative;
+   
+    width: 100%;
+   z-index: 1 ;
+    background:none;
+    border: none;
+    border-radius: 0;
+    /* top:150px!IMPORTANT; */
+
+}
+.navbar .navbar-expand-lg .my-nav .navbar-dark
+{
+  
+}
+.my-nav {
+  
+    background-color:rgb(255,99,71,0.7);
+
+border-color:rgba(0,0,0,0.00);
+}
+
+.my-nav .navbar-nav > li > a {
+    font-weight: bold;
+     font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+  }
+
+  ul li a.nav-link
+ {
+
+color:red;
+ }
+
+
+
+
+
+ /* MOBILE */
+ @media screen and (min-width: 992px) {
+   /* remove the padding from the navbar so the dropdown hover state is not broken */
+ .navbar {
+   display:block;
+ 
+   padding-top:0px;
+   padding-bottom:0px;
+ }
+ 
+ /* remove the padding from the nav-item and add some margin to give some breathing room on hovers */
+ .navbar .nav-item {
+   padding:.5rem .5rem;
+   margin:0 .25rem;
+ }
+ 
+ /* makes the dropdown full width  */
+ .navbar .dropdown {position:static;}
+ 
+ .navbar .dropdown-menu {
+   width:100%;
+   left:0;
+   right:0;
+ /*  height of nav-item  */
+   top:45px;
+   
+   display:block;
+   visibility: hidden;
+   opacity: 0;
+   transition: visibility 0s, opacity 0.3s linear;
+   
+ }
+   
+  
+ 
+   
+   /* shows the dropdown menu on hover */
+ .navbar .dropdown:hover .dropdown-menu, .navbar .dropdown .dropdown-menu:hover {
+   display:block;
+   visibility: visible;
+   opacity: 1;
+   transition: visibility 0s, opacity 0.3s linear;
+ }
+   
+   .navbar .dropdown-menu {
+     /* border: 1px solid rgb(255, 255, 255); */
+     background-color: #fff;
+   }
+
+   
+ 
+ }
