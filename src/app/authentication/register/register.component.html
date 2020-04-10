@@ -1,0 +1,29 @@
+<div class="modal fade" id="Register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+    <div class="wrapper1 fadeInDown  modal-dialog" >
+        <div id="formContent" class="modal-content">
+        
+
+            <form #registerForm = "ngForm" (ngSubmit)="submitHandler(registerForm.value)">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                <fieldset>
+                <h3  class="fadeIn first"style="text-align: center; color:#379683; font-family: Comic Sans MS, cursive, sans-serif">Регистрация</h3>
+                <label for="user_FirstName"></label>
+                <input #firstNameInput="ngModel" ngModel type="text" class="fadeIn form-control" id="FirstName" placeholder="Име" name="firstName">
+                <input #lastNameInput="ngModel" ngModel class="fadeIn form-control" id="LastName" placeholder="Фамилия"
+                       type="text" name="lastName">
+                <label for="user_email"></label>
+                <input #emailInput="ngModel" ngModel type="text" id="user_email" class="fadeIn second form-control" name="email" placeholder="Ел.поща">
+                <label for="user_password"></label>
+                <input #passwordInput="ngModel" ngModel type="password" id="user_password" class="fadeIn second form-control" name="password" placeholder="Парола">
+
+                <button type="submit" class="fadeIn fourth btn btn-success" value="">Регистрация</button>
+                </fieldset>
+            </form>
+
+        
+
+        </div>
+    </div>

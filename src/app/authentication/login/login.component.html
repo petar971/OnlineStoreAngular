@@ -1,0 +1,38 @@
+<div class="modal fade" id="Login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  
+   
+    <div class="wrapper1 fadeInDown modal-dialog">
+            <div id="formContent" class="modal-content">
+                <!-- Tabs Titles -->
+    
+                <!-- Icon -->
+              
+    
+                <!-- Login Form -->
+                
+                   
+                <form #loginForm="ngForm" (ngSubmit)="handleLogin(loginForm.value)">
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    <h3  class="fadeIn first"style="text-align: center; color:#379683;; font-family: Comic Sans MS, cursive, sans-serif">Вход</h3>
+    
+                    <label for="user_email"></label>
+                    <input type="text" #emailInput="ngModel" ngModel [pattern] = "emailRegex"class="fadeIn second form-control" name="username" placeholder="email">
+                    <label for="password"></label>
+                    <input #passwordInput="ngModel" ngModel type="password" id="password" class="fadeIn third form-control" name="password" placeholder="password">
+                    
+                    <input type="submit" class="fadeIn fourth btn btn-success" value="Вход">
+                
+                </form>
+                
+                <!-- Remind Passowrd -->
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Забравена парола?</a>
+                </div>
+            </div>
+            
+        </div>
+    
+    </div>

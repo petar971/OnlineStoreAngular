@@ -24,16 +24,15 @@
     background:none;
     border: none;
     border-radius: 0;
+    
+
     /* top:150px!IMPORTANT; */
 
 }
-.navbar .navbar-expand-lg .my-nav .navbar-dark
-{
-  
-}
+
 .my-nav {
   
-    background-color:rgb(255,99,71,0.7);
+    background-color:#379683;
 
 border-color:rgba(0,0,0,0.00);
 }
@@ -105,5 +104,4 @@ color:red;
    }
 
    
- 
- }
+}

@@ -3,37 +3,43 @@ import { NgModule } from '@angular/core';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
-
-import { ProductsListComponent } from './products-list/products-list.component';
-import { ProductCardComponent } from './product-card/product-card.component';
+import { SliderComponent } from './slider/slider.component';
 import { FooterComponent } from './footer/footer.component';
-import { CategoryComponent } from './category/category.component';
-import { HomeModule } from './home/home.module';
-import { HomeComponent } from './home/home/home.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { RecommendProductsComponent } from './recommend-products/recommend-products.component';
+import { ProductComponent } from './product/product.component';
+import { ProductService } from './services/product.service';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { LoginComponent } from './authentication/login/login.component';
+import { RegisterComponent } from './authentication/register/register.component';
+import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
+
 
 @NgModule({
   declarations: [
     
     AppComponent,
     NavComponent,
-    ProductsListComponent,
-    ProductCardComponent,
+    SliderComponent,
     FooterComponent,
-    CategoryComponent,
+    RecommendProductsComponent,
+    ProductComponent,
+    ProductDetailsComponent,
     LoginComponent,
     RegisterComponent
   ],
   imports: [
-    HomeModule,
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
     
   ],
-  providers: [],
+  providers: [ProductService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
