@@ -11,6 +11,8 @@ import { FooterComponent } from './footer/footer.component';
 import { CategoryComponent } from './category/category.component';
 import { HomeModule } from './home/home.module';
 import { HomeComponent } from './home/home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { HomeComponent } from './home/home/home.component';
     ProductsListComponent,
     ProductCardComponent,
     FooterComponent,
-    CategoryComponent
+    CategoryComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     HomeModule,
