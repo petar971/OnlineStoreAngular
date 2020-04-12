@@ -62,11 +62,25 @@
      
 
     </ul>
+    <<ng-container *ngIf="isAdmin()">
+    
+    <ul class="navbar-nav nav-right">
+      <li class="nav-item"><a class="nav-link btn"href="">Админ</a></li>
+    </ul>
+  </ng-container>
+    <ng-container *ngIf="!isReady()">
     <ul class="navbar-nav nav-right">
       <li class="nav-item"><a class="nav-link btn"href="" data-toggle="modal" data-target="#Login">Вход</a></li>
       <li class="nav-item"><a class="nav-link btn" data-toggle="modal" data-target="#Register" href="">Регистрация</a></li>
     </ul>
-    
+  </ng-container>
+  <ng-container *ngIf="isReady()">
+    <ul class="navbar-nav nav-right">
+      <li class="nav-item"><a class="nav-link btn"href="" (click)="isAdmin()">Профил</a></li>
+      <li class="nav-item"><a class="nav-link btn"href="" (click)="logout()">Изход</a></li>
+    </ul>
+  </ng-container>
+
   </div>
 
 

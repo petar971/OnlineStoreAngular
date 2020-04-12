@@ -6,11 +6,12 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
+  token:string;
   currentUser:
   {
-    email:string;
+    username:string;
     password:string;
-  } = null;
+  };
  
 get isLogged()
 {
@@ -18,12 +19,7 @@ get isLogged()
 }
   
   constructor(private http:HttpClient) { 
-    this.http.get('http://localhost:8000/auth').subscribe((user:any)=>
-    {
-      this.currentUser = user;
-    }, () => {
-      this.currentUser = null;
-    })
+   
   }
 
 
@@ -38,6 +34,30 @@ get isLogged()
   }
   logout()
   {
-    return this.http.post('http://localhost:8000/logout',{},{withCredentials:true});
+   localStorage.clear();
   }
+isAuthenticated()
+{
+  return localStorage.getItem('token') !== null;
+}
+isAdmin()
+{
+ if(this.isAuthenticated()){
+  let roles = localStorage.getItem('roles');
+ 
+console.log();
+if(roles.indexOf("ROLE_ADMIN") !== -1)
+{
+ return true
+}
+else {
+  return false
+}
+ }
+}
+getToken()
+{
+  localStorage.getItem('token');
+  return this.token;
+}
 }

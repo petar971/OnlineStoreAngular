@@ -1,0 +1,70 @@
+
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal" #CreateForm="ngForm" (ngSubmit)="submitHandler(CreateForm.value)" >
+                <fieldset>
+                    <legend>Добавяне на продукт</legend>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_title">Име</label>
+                        <div class="col-sm-4 ">
+                            <input #NameInput ngModel type="text" class="form-control" id="name" placeholder="Име на продукта"
+                                   name="name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_content" >Описание</label>
+                        <div class="col-sm-6">
+                        <textarea #DescriptionInput ngModel  class="form-control" rows="6" id="description"
+                                  name="description" placeholder="Описание"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_title">цена</label>
+                        <div class="col-sm-4 ">
+                            <input #PriceInput ngModel type="number" step="any" class="form-control" id="price" placeholder="Цена"
+                                   name="price">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_title">Производител</label>
+                        <div class="col-sm-4 ">
+                            <input #MakerInput ngModel type="text" class="form-control" id="maker" placeholder="Производител"
+                                   name="maker">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="article_image">Изображение</label>
+                        <div class="col-sm-4 ">
+                            <input #ImageInput ngModel type="file" class="form-control" id="image" placeholder="Imagе"
+                                   name="image">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="category">Категория</label>
+                   
+                        <label>
+                            <select #CategoryInput ngModel name="category">
+                                <ng-container *ngFor="let category of categories">
+                                <option value="{{category.id}}">{{category.category}}</option>
+                            </ng-container>
+                            </select>
+                        </label>
+                    </div>
+                    
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <a class="btn btn-default" href="">Отказ</a>
+                            <button type="submit" class="btn btn-primary">Добави</button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>

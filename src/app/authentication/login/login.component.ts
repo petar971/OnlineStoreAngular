@@ -19,8 +19,12 @@ export class LoginComponent implements OnInit {
 
   handleLogin({username, password}: {username:string , password:string})
   {
-    this.userService.login(username,password).subscribe(() =>
+    this.userService.login(username,password).subscribe((data) =>
     {
+      console.log(data);
+      localStorage.setItem('token',data['token'])
+      localStorage.setItem('roles',data['data']['user'])
+      localStorage.setItem('user',username);
       this.router.navigate([''])
     },console.error);
 

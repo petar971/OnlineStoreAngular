@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from './services/user.service';
+//import { currentId } from 'async_hooks';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +10,10 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent {
   title = 'OnlineShop';
+  
   constructor(private userService:UserService)
   {
-
+    
   }
-get isReady():boolean
-{
-return this.userService.currentUser !== undefined;
-}
   
 }

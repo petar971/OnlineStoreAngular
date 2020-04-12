@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NavComponent } from './nav/nav.component';
 import { SliderComponent } from './slider/slider.component';
 import { FooterComponent } from './footer/footer.component';
@@ -15,7 +15,10 @@ import { LoginComponent } from './authentication/login/login.component';
 import { RegisterComponent } from './authentication/register/register.component';
 import { NgForm, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserService } from './services/user.service';
-
+import { CookieService} from 'ngx-cookie-service';
+import { JwtInterceptorService } from './jwt-interceptor.service';
+import { ProductCreateComponent } from './adminControl/product-create/product-create.component';
+import { CategoryService } from './services/category.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,8 @@ import { UserService } from './services/user.service';
     ProductComponent,
     ProductDetailsComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -36,10 +40,18 @@ import { UserService } from './services/user.service';
     NgbModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     
   ],
-  providers: [ProductService,UserService],
+  providers: [ProductService,UserService,CategoryService
+  // {
+  //   provide:HTTP_INTERCEPTORS,
+  //   useClass:JwtInterceptorService,
+  //   multi:true
+  // }
+]
+  ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }
