@@ -1,0 +1,14 @@
+
+
+<div class="row category">
+    
+    <ng-container *ngFor="let category of categories">
+        <div class="col-lg-12 btn" (click) = "sendCategoryId(category)">
+                <a >
+            {{category.category}}
+        </a>
+        
+        </div>
+       
+    </ng-container>
+</div>

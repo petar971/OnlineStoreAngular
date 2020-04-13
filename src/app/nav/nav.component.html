@@ -25,10 +25,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" routerLink="store" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Здравословни храни
+        <a class="nav-link" routerLink='/store' id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Магазин
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
         <div class="container-fluid">
             
           <div class="col-lg-3">
@@ -54,7 +54,7 @@
           </ul>
           </div>              
             </div>
-          </div> 
+          </div>  -->
           <!--  /.container  -->
 
        
@@ -62,7 +62,7 @@
      
 
     </ul>
-    <<ng-container *ngIf="isAdmin()">
+    <ng-container *ngIf="isAdmin()">
     
     <ul class="navbar-nav nav-right">
       <li class="nav-item"><a class="nav-link btn"href="">Админ</a></li>

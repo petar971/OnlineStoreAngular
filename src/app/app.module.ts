@@ -19,6 +19,10 @@ import { CookieService} from 'ngx-cookie-service';
 import { JwtInterceptorService } from './jwt-interceptor.service';
 import { ProductCreateComponent } from './adminControl/product-create/product-create.component';
 import { CategoryService } from './services/category.service';
+import { ListproductComponent } from './adminControl/listproduct/listproduct.component';
+import { StoreComponent } from './store/store.component';
+import { CategoryComponent } from './category/category.component';
+import { ProductGridComponent } from './product-grid/product-grid.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { CategoryService } from './services/category.service';
     ProductDetailsComponent,
     LoginComponent,
     RegisterComponent,
-    ProductCreateComponent
+    ProductCreateComponent,
+    ListproductComponent,
+    StoreComponent,
+    CategoryComponent,
+    ProductGridComponent
   ],
   imports: [
     BrowserModule,

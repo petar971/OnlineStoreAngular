@@ -1,0 +1,13 @@
+<div class="row ">
+    <div class="col-lg-3 category-sidebar">
+       <app-category (selectedCategory) = "receiveCategoryid($event)"></app-category>
+    </div>
+
+    
+    
+    <div class="col-lg-9">
+     <app-product-grid [selectedCategory] = "categoryid"></app-product-grid>
+    </div>
+
+
+</div>

@@ -4,6 +4,9 @@ import { AppComponent } from './app.component';
 import { SliderComponent } from './slider/slider.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { ProductCreateComponent } from './adminControl/product-create/product-create.component';
+import { ListproductComponent } from './adminControl/listproduct/listproduct.component';
+import { StoreComponent } from './store/store.component';
+import { ProductGridComponent } from './product-grid/product-grid.component';
 
 
 
@@ -21,6 +24,14 @@ const routes: Routes =
 {
   path:"admin/products/create",
   component:ProductCreateComponent
+},
+{
+  path:"admin/products/list",
+  component:ListproductComponent
+},
+{
+  path:"store",
+  component:StoreComponent
 }
 ];
 

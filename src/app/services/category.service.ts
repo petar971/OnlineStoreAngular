@@ -7,6 +7,7 @@ const BASE_URL = " http://127.0.0.1:8000/category";
 })
 export class CategoryService {
 
+  selectedCategory:any
   constructor(private http:HttpClient) { }
 
   getAllCategory(): Observable<Array<any>>
@@ -14,5 +15,7 @@ export class CategoryService {
      return this.http.get<Array<any>>(BASE_URL);
   }
 
-  
+  selectCategory(category) {
+    (this as any).selectedCategory = category;
+  }
 }

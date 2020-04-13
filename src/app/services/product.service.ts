@@ -30,8 +30,12 @@ getProductById(id:number): Observable<Array<IProduct>>
 {
    return this.http.get<Array<IProduct>>(BASE_URL + `/${id}`);
 }
+getProductsByCategoryId(id:number): Observable<Array<IProduct>>
+{
+   return this.http.get<Array<IProduct>>(BASE_URL + `/category/${id}`);
+}
 
-Create(name:string , description:string,price:number,maker:string,image:File,category:string)
+Create(name:string , description:string,price:number,maker:string,image:string,category:string)
   {
     return this.http.post('http://127.0.0.1:8000/api/products/create',{name,description,price,maker,image,category},{headers});
   }

@@ -16,11 +16,11 @@ export class ProductDetailsComponent implements OnInit {
     private productService:ProductService) { }
 
   ngOnInit() {
-// this.id = this.route.snapshot.params['id'];
-// this.productService.getProductById(this.id).subscribe((data) =>
-// {
-//   this.product = data;
-// })
+this.id = this.route.snapshot.params['id'];
+this.productService.getProductById(this.id).subscribe((data) =>
+{
+  this.product = data;
+})
 
   
   }

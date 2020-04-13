@@ -1,0 +1,14 @@
+.category
+{
+  
+    text-align: center;
+}
+
+.btn:hover
+{
+    background-color: #195348;
+}
+.btn{
+    color:white;
+    font-weight: bold;
+}

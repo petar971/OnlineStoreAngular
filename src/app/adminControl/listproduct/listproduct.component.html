@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-lg-2">Име</div>
+    <div class="col-lg-2">Описание</div>
+    <div class="col-lg-2">Цена</div>
+    <div class="col-lg-2">Промо цена</div>
+    <div class="col-lg-2">Производител</div>
+    <div class="col-lg-2"></div>
+    <ng-container *ngFor="let product of products">
+    <div class="col-lg-2">{{product.name}}</div>
+    <div class="col-lg-2">{{product.description.slice(0,10)}}</div>
+    <div class="col-lg-2">{{product.price}}</div>
+    <div class="col-lg-2">{{product._promo_price}}</div>
+    <div class="col-lg-2">{{product.maker}}</div>
+    <div class="col-lg-2">
+        <div class="row">
+            <div class="col-lg-6"><input type="number" placeholder="промоЦена"></div>
+            <div class="col-lg-6"><button class='btn btn-success'>Добави</button> </div>
+        </div>
+       
+       
+    </div>
+</ng-container>
+</div>

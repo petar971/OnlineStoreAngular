@@ -25,7 +25,7 @@ export class ProductCreateComponent implements OnInit {
     })
   }
 
-  submitHandler({name,description,price,maker,image,category}:{name:string , description:string,price:number,maker:string,image:File,category:string})
+  submitHandler({name,description,price,maker,image,category}:{name:string , description:string,price:number,maker:string,image:string,category:string})
   {
 this.productService.Create(name,description,price,maker,image,category).subscribe(()=>
 {
