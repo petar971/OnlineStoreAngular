@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ProductService } from '../services/product.service';
 import IProduct from '../models/IProduct';
 import { CategoryService } from '../services/category.service';
@@ -11,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class ProductGridComponent implements OnInit {
   @Input() selectedCategory;
+ 
   products:IProduct[];
  
  

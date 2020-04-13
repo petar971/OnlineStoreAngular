@@ -23,6 +23,8 @@ import { ListproductComponent } from './adminControl/listproduct/listproduct.com
 import { StoreComponent } from './store/store.component';
 import { CategoryComponent } from './category/category.component';
 import { ProductGridComponent } from './product-grid/product-grid.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { AdminPanelComponent } from './adminControl/admin-panel/admin-panel.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { ProductGridComponent } from './product-grid/product-grid.component';
     ListproductComponent,
     StoreComponent,
     CategoryComponent,
-    ProductGridComponent
+    ProductGridComponent,
+    ShoppingCartComponent,
+    AdminPanelComponent
   ],
   imports: [
     BrowserModule,

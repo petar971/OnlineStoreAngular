@@ -7,6 +7,8 @@ import { ProductCreateComponent } from './adminControl/product-create/product-cr
 import { ListproductComponent } from './adminControl/listproduct/listproduct.component';
 import { StoreComponent } from './store/store.component';
 import { ProductGridComponent } from './product-grid/product-grid.component';
+import { AdminPanelComponent } from './adminControl/admin-panel/admin-panel.component';
+import { AuthGuard } from './auth.guard';
 
 
 
@@ -22,17 +24,24 @@ const routes: Routes =
   component:ProductDetailsComponent
 },
 {
+  path:"store",
+  component:StoreComponent
+},
+{
+  path:"admin",
+  component:AdminPanelComponent,
+  canActivate:[AuthGuard]
+},
+{
   path:"admin/products/create",
-  component:ProductCreateComponent
+  component:ProductCreateComponent,
+  canActivate:[AuthGuard]
 },
 {
   path:"admin/products/list",
-  component:ListproductComponent
+  component:ListproductComponent,
+  canActivate:[AuthGuard]
 },
-{
-  path:"store",
-  component:StoreComponent
-}
 ];
 
 @NgModule({

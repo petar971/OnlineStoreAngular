@@ -30,7 +30,7 @@ get isLogged()
 
   register(FirstName:string , LastName:string,email:string,password:string)
   {
-    return this.http.post('https://127.0.0.1:8000/register',{FirstName,LastName,email,password},{withCredentials:true});
+    return this.http.post('http://127.0.0.1:8000/register',{FirstName,LastName,email,password},{withCredentials:true});
   }
   logout()
   {
