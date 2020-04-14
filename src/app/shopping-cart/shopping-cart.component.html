@@ -1,1 +1,13 @@
-<p>shopping-cart works!</p>
+
+<div class="row">
+    <ng-container *ngFor="let product of products">
+    <div class="col-lg-3">{{product.name}}</div>
+    <ng-container *ngIf="product._promo_price !== 0">
+        <div class="col-lg-3">{{product.price}}</div>
+    </ng-container>
+    <ng-container *ngIf="product._promo_price == 0">
+    <div class="col-lg-3">{{product.price}}</div>
+</ng-container>
+    <div class="col-lg-3">{{product.maker}}</div>
+</ng-container>
+</div>

@@ -25,6 +25,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProductGridComponent } from './product-grid/product-grid.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { AdminPanelComponent } from './adminControl/admin-panel/admin-panel.component';
+import { SharedService } from './services/shared.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { AdminPanelComponent } from './adminControl/admin-panel/admin-panel.comp
     
     
   ],
-  providers: [ProductService,UserService,CategoryService
+  providers: [ProductService,UserService,CategoryService,SharedService
   // {
   //   provide:HTTP_INTERCEPTORS,
   //   useClass:JwtInterceptorService,

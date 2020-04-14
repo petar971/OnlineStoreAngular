@@ -9,6 +9,7 @@ import { StoreComponent } from './store/store.component';
 import { ProductGridComponent } from './product-grid/product-grid.component';
 import { AdminPanelComponent } from './adminControl/admin-panel/admin-panel.component';
 import { AuthGuard } from './auth.guard';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -41,6 +42,10 @@ const routes: Routes =
   path:"admin/products/list",
   component:ListproductComponent,
   canActivate:[AuthGuard]
+},
+{
+  path:"cart",
+  component:ShoppingCartComponent
 },
 ];
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import IProduct from '../models/IProduct';
+import { SharedService } from '../services/shared.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  constructor() { }
+  products:IProduct[];
+  constructor(private sharedService:SharedService) { }
 
   ngOnInit() {
+
+   this.products = this.sharedService.getCartList();
+   
   }
 
+
+    
+    
+
+
 }
+  
+
+
